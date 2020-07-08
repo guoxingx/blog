@@ -1,0 +1,46 @@
+version: "3"
+
+services:
+
+    backend:
+        build: ./backend
+        expose:
+            - "8000"
+        environment:
+            - TZ=PRC
+        volumes:
+            - ./docker.backend.json:/backend/cmd/docker.backend.json # config file. see backend/cmd/dev/config.json for details
+            - ./backend/statics:/backend/statics
+
+        depends_on:
+            - mysql
+            # - redis
+        command: /backend/cmd/docker.backend.json
+
+    nginx:
+        build: ./nginx
+        ports:
+            - "80:80"
+        volumes:
+            - ./frontend/dist:/blog
+            - ./backend/statics:/blog/statics
+        depends_on:
+            - backend
+
+    mysql:
+        image: mysql:5.7
+        ports:
+            - "3306:3306"
+        command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+        env_file: docker.mysql.env # see template.env for details
+
+        volumes:
+            - ./data/mysql:/var/lib/mysql
+
+              # redis:
+              #     image: redis
+              #     ports:
+              #         - "6379:6379"
+              #     volumes:
+              #         - ./data/redis/data:/data
+              #     command: ["redis-server", "--appendonly", "yes"]

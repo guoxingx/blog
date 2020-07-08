@@ -1,0 +1,16 @@
+{
+    "webserver": {
+		"host": "0.0.0.0:8000",
+        "users": {
+			"enigma": "05fc0490ef490761667ec82a4af82f4d",
+			"hostess": "9e91daf26edfad77f67ac347b4c0932e"
+        },
+        "mysql": {
+			"host":     "0.0.0.0:3306",
+			"user":     "guoxing",
+			"password": "guoxing",
+			"database": "wuyi"
+        },
+        "statics": "/Users/wuyi/code/projects/blog/statics"
+    }
+}

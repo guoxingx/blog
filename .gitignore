@@ -1,0 +1,8 @@
+.*.swp
+private.conf
+node_modules
+package-lock.json
+backend/statics/*
+data
+docker.*.env
+docker.*.json
