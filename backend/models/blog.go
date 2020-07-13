@@ -65,7 +65,7 @@ func (m *Blog) toScan() []interface{} {
 
 // ListBlogs ...
 func ListBlogs(db *sql.DB) ([]*Blog, error) {
-	request := fmt.Sprintf("SELECT * FROM %s ORDER BY created_at DESC", tableBlog)
+	request := fmt.Sprintf("SELECT * FROM %s ORDER BY date DESC", tableBlog)
 	rows, err := db.Query(request)
 	if err != nil {
 		return nil, err

@@ -7,7 +7,8 @@
       <blog-cell v-for="blog in blogsShow" :key="blog" :blog="blog"></blog-cell>
     </div>
 
-    <el-pagination layout="prev,pager,next" small
+    <el-pagination class="page"
+      layout="prev,pager,next" small
       :total="this.blogs.length" :page-size="10"
       @current-change="changePage"
       v-if="this.blogs.length>10">
@@ -56,19 +57,8 @@ export default {
 </script>
 
 <style>
-  h2{
-    margin-top: 40px;
-    margin-bottom: 20px;
-  }
-  h3{
-    margin-bottom: 15px;
-  }
-  dd{
-    height: 200px;
-  }
-
-  p>img{
-    max-height: 200px;
-    max-width: 200px;
-  }
+.page {
+  margin-top: 10px;
+  text-align: center;
+}
 </style>

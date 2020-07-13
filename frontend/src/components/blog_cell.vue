@@ -1,9 +1,9 @@
 <template>
   <div class="blog-unit">
     <div>
-      <div style="float: left; margin-right: 30px;">
+<!--       <div style="float: left; margin-right: 30px;">
         <img :src="blog.cover" @click="toBlog(1)">
-      </div>
+      </div> -->
       <div style="text-align: left;">
         <div>
         <el-link type="primary" :underline="false" @click="toBlog(1)">
@@ -32,12 +32,12 @@ export default {
 <style>
 .blog-unit {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 20px;
   width: 95%;
   /*height: 200px;*/
   /*max-height: 200px;*/
 
-  padding-top: 20px;
+  /*padding-top: 10px;*/
   border-bottom: 0.5px solid #BACCE3;
 }
 
