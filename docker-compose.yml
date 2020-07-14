@@ -11,6 +11,7 @@ services:
         volumes:
             - ./docker.backend.json:/backend/cmd/docker.backend.json # config file. see backend/cmd/dev/config.json for details
             - ./backend/statics:/backend/statics
+            - ./backend/images:/backend/images
 
         depends_on:
             - mysql
@@ -24,6 +25,7 @@ services:
         volumes:
             - ./frontend/dist:/blog
             - ./backend/statics:/blog/statics
+            - ./backend/images:/blog/images
         depends_on:
             - backend
 
