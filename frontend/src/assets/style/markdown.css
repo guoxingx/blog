@@ -5,17 +5,33 @@
     word-wrap: break-word;
     margin-right: 50px;
     margin-bottom: 50px;
+    /*border-bottom: 1px solid #dbdbdb;*/
 }
 
 .html h1 {
-  font-size: 30px;
+  font-size: 40px;
+  /*padding-bottom: 10px;*/
+  /*border-bottom: 1px dashed #dbdbdb;*/
+}
+
+.html h2 {
+  margin-top: 40px;
+  padding-bottom: 7px;
+  border-bottom: 1px dashed #dbdbdb;
+}
+
+.html h3 {
+  margin-top: 30px;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed #dbdbdb;
 }
 
 .html code:not([class]) {
-  padding: 0.2em 0.4em;
+  /*padding: 0.2em 0.4em;*/
   margin: 0;
   font-size: 85%;
-  background-color: rgba(27,31,35,0.05);
+  /*background-color: rgba(27,31,35,0.05);*/
+  background-color: #fef8df;
   border-radius: 3px;
 }
 
@@ -27,4 +43,11 @@
   float: right;
   margin-right: 50px;
   margin-bottom: 50px;
+}
+
+pre {
+  margin-left: 20px;
+  padding: 5px;
+  background-color: #fef8df;
+  border-radius: 5px;
 }

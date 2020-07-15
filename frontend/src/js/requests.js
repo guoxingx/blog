@@ -54,7 +54,7 @@ export function getBlog(id, params) {
 }
 
 export function getHtml(path) {
-  return get(HOST + '/statics/' + path)
-  // console.log(path)
-  // return get("http://localhost/statics/slice.md")
+  // return get(HOST + '/statics/' + path)
+  console.log(path)
+  return get("http://localhost/statics/interface.md")
 }

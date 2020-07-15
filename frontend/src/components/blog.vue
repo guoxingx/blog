@@ -90,4 +90,7 @@ export default {
 .gitment-editor-main {
   background: white;
 }
+.date {
+  border-bottom: 1px solid #dbdbdb;
+}
 </style>
